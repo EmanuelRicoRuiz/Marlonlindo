@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sasha UdeM/SignUp</title>
+	<link rel="shortcut icon" href="img/logo2.png">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta charset="utf-8">
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script> 
+    <script>
+      
+      var firebaseConfig = {
+        apiKey: "AIzaSyAYSXEARqz4atK8_3wDrRSWweJ2xuJU8zY",
+        authDomain: "sasha-c513a.firebaseapp.com",
+        projectId: "sasha-c513a",
+        storageBucket: "sasha-c513a.appspot.com",
+        messagingSenderId: "88252255310",
+        appId: "1:88252255310:web:7a23e5eb0a2c9b9fcb071f",
+        measurementId: "G-DRR8B2GVZ9"
+      };
+     
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+</head>
+<body>
+
+	<script src="app.js"></script>
+	<div class="login-page">
+
+  <div class="form">
+  	<div class="cabecera"><h1>Registrarse</h1></div>
+  	
+  	<center><img class="imagen1" src="img/logo2.png"></center>
+    
+    <form class="login-form">
+      <input id="correo" type="text" placeholder="correo electrónico"/>
+      <input id="contraseña" type="password" placeholder="contraseña"/>
+      <input id="confirmarContra" type="password" placeholder="confirmar contraseña"/>
+      <div id="sugerencias" class="form-gruop">
+
+      </div>
+      <input onclick="registrar()" type="button" class="botonR" value="registrarse">
+      <p class="message">¿ya tienes cuenta? <a href="index.html">Inicia sesión</a></p>
+     
+    </form>
+  </div>
+</div>
+</body>
+</html>

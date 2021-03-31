@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sasha UdeM</title>
+	<link rel="shortcut icon" href="img/logo2.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta charset="utf-8">
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+     <link rel="stylesheet" type="text/css" href="css/estilos2.css">
+    
+    <script>
+      
+      var firebaseConfig = {
+        apiKey: "AIzaSyAYSXEARqz4atK8_3wDrRSWweJ2xuJU8zY",
+        authDomain: "sasha-c513a.firebaseapp.com",
+        projectId: "sasha-c513a",
+        storageBucket: "sasha-c513a.appspot.com",
+        messagingSenderId: "88252255310",
+        appId: "1:88252255310:web:7a23e5eb0a2c9b9fcb071f",
+        measurementId: "G-DRR8B2GVZ9"
+      };
+     
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/pulse/bootstrap.min.css">
+</head>
+<body >
+    <script src="app.js"></script>
+    <div id="login">
+        <img src="img/back.png"
+    onclick="back()"
+    width="5%"
+    id="back">
+    </div>
+	<center>
+	<div> 
+		<img width="30%" src="img/logo3.png">
+	</div>
+    </center>
+    
+    <center>
+    <br><br>
+    	
+   
+        
+        <div class="container">
+            <h3>Agregar publicación</h3>
+            
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <div class="form-gruop">
+                                    <img width="70%" id="image" width="300">
+                                    <br><hr>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Nombre del objeto*</h5>
+                                    <input type="text" 
+                                    id="nombreObjeto" 
+                                    class="form-control"
+                                    placeholder="Nombre del objeto"
+                                    autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Descripción del objeto*</h5>
+                                    <textarea id="descriObejto" 
+                                    class="form-control" 
+                                    placeholder="descripción del objeto"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Ubicación del objeto*</h5>
+                                    <textarea id="ubiObjeto" 
+                                    class="form-control" 
+                                    placeholder="descripción del objeto"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <h5>Foto del objeto</h5>
+                                    <input  type="file" 
+                                    name="fichero" 
+                                    value="" 
+                                    id="photo" 
+                                    class="form-control"
+                                    accept="image/png, image/jpeg, image/gif">
+                                    
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <input type="button" 
+                                    class="btn btn-secondary"
+                                    onclick="uploadImage()" 
+                                    value="subir imagen">
+                                </div>
+                                <hr>
+                                <div id="sugerencias" class="form-gruop">
+
+                                </div>
+                                <button onclick="HacerPublicacion()" class="btn btn-primary" id="btn-task-form">
+                                    publicar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" id="tasks-container">
+                    
+                </div>  
+           
+        </div>
+    </center>
+</body>
+</html>
